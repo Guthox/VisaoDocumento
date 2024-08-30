@@ -12,6 +12,6 @@ João Filipe Pinheiro Marques           RA: 21.00740-3 <br>
 Alexandre Noriyuki Sasaki              RA:22.00452-0 <br>
 Cyro Conde Garone Morelli              RA:22.00077-0 <br>
 Thiago Calabresi                       RA:22.00388-6 <br>
-Wagner Silva Filho                     RA:21.01511-2
-Augusto Henrique Leme de Oliveira      RA:17.00268-0
+Wagner Silva Filho                     RA:21.01511-2<br>
+Augusto Henrique Leme de Oliveira      RA:17.00268-0<br>
 
