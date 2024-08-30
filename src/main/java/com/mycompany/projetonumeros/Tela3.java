@@ -14,7 +14,17 @@ public class Tela3 extends javax.swing.JFrame {
      * Creates new form Tela3
      */
     public Tela3() {
+        super("Tela3");
         initComponents();
+        
+        if (Info.esta(Info.pegarValor())){
+           lbResultado.setText("Chave encontrada. Posição: " + Info.achar(Info.pegarValor()) + 1);
+        }
+        else{
+            lbResultado.setText("Chave não encontrada");
+        }
+        
+        
     }
 
     /**

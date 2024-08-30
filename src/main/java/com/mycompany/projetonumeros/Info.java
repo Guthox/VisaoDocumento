@@ -11,23 +11,25 @@ import java.util.ArrayList;
  */
 public class Info {
     
-    private List<Integer> lista;
-    final int TAMANHO = 8;
+    private static List<Integer> lista;
+    private static final int TAMANHO = 8;
+    private static int valor;
     
-    public Info(int[] valoresOrdenados){
+    
+    public static void encher(int[] valoresOrdenados){
        lista = new ArrayList<>();
         for (int i = 0; i < TAMANHO; i++){
            lista.add(valoresOrdenados[i]);
        }
     }
     
-    public void deletar(){
+    public static void deletar(){
         lista = new ArrayList<>();
     }
     
     // Retorna a posicao.
     // -1 Se não estiver
-    public int achar(int valor){
+    public static int achar(int valor){
         for (int i = 0; i < TAMANHO; i++){
             if (lista.get(i) == valor){
                 return i;
@@ -36,9 +38,18 @@ public class Info {
         return -1;
     }
     
-    public boolean esta(int valor){
+    public static boolean esta(int valor){
         return lista.contains(valor);
     }
+    
+    public static void guardarValor(int valorGuarda){
+        valor = valorGuarda;
+    }
+    
+    public static int pegarValor(){
+        return valor;
+    }
+
     
     
 }   

@@ -47,11 +47,20 @@ public class Tela2 extends javax.swing.JFrame {
 
         btEntra.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btEntra.setText("Entra");
+        btEntra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btEntraMouseClicked(evt);
+            }
+        });
         getContentPane().add(btEntra);
         btEntra.setBounds(360, 380, 130, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btEntraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btEntraMouseClicked
+        Info.guardarValor(Integer.parseInt(tfValorInteiro.getText()));
+    }//GEN-LAST:event_btEntraMouseClicked
 
     /**
      * @param args the command line arguments
