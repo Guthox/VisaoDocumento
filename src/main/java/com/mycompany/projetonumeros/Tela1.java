@@ -4,6 +4,7 @@
  */
 package com.mycompany.projetonumeros;
 import java.util.Arrays;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Gutho
@@ -16,6 +17,7 @@ public class Tela1 extends javax.swing.JFrame {
     public Tela1() {
         super("Adicionar Valores");
         initComponents();
+        setVisible(true);
     }
 
     /**
@@ -62,65 +64,65 @@ public class Tela1 extends javax.swing.JFrame {
         lbValor2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbValor2.setText("Valor 2:");
         getContentPane().add(lbValor2);
-        lbValor2.setBounds(100, 170, 100, 40);
+        lbValor2.setBounds(490, 120, 100, 40);
 
         tfValor2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         getContentPane().add(tfValor2);
-        tfValor2.setBounds(190, 180, 100, 30);
+        tfValor2.setBounds(580, 130, 100, 30);
 
         lbValor3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbValor3.setText("Valor 3:");
         getContentPane().add(lbValor3);
-        lbValor3.setBounds(100, 230, 100, 40);
+        lbValor3.setBounds(100, 170, 100, 40);
 
         tfValor3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         getContentPane().add(tfValor3);
-        tfValor3.setBounds(190, 240, 100, 30);
+        tfValor3.setBounds(190, 180, 100, 30);
 
         lbValor4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbValor4.setText("Valor 4:");
         getContentPane().add(lbValor4);
-        lbValor4.setBounds(100, 290, 100, 40);
+        lbValor4.setBounds(490, 170, 100, 40);
 
         tfValor4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         getContentPane().add(tfValor4);
-        tfValor4.setBounds(190, 300, 100, 30);
+        tfValor4.setBounds(580, 180, 100, 30);
 
         lbValor5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbValor5.setText("Valor 5:");
         getContentPane().add(lbValor5);
-        lbValor5.setBounds(540, 110, 100, 40);
+        lbValor5.setBounds(100, 230, 100, 40);
 
         tfValor5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         getContentPane().add(tfValor5);
-        tfValor5.setBounds(630, 120, 100, 30);
+        tfValor5.setBounds(190, 240, 100, 30);
 
         lbValor6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbValor6.setText("Valor 6:");
         getContentPane().add(lbValor6);
-        lbValor6.setBounds(540, 170, 100, 40);
+        lbValor6.setBounds(490, 230, 100, 40);
 
         tfValor6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         getContentPane().add(tfValor6);
-        tfValor6.setBounds(630, 180, 100, 30);
+        tfValor6.setBounds(580, 240, 100, 30);
 
         lbValor7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbValor7.setText("Valor 7:");
         getContentPane().add(lbValor7);
-        lbValor7.setBounds(540, 230, 100, 40);
+        lbValor7.setBounds(100, 290, 100, 40);
 
         tfValor7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         getContentPane().add(tfValor7);
-        tfValor7.setBounds(630, 240, 100, 30);
+        tfValor7.setBounds(190, 300, 100, 30);
 
         lbValor8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbValor8.setText("Valor 8:");
         getContentPane().add(lbValor8);
-        lbValor8.setBounds(540, 290, 100, 40);
+        lbValor8.setBounds(490, 290, 100, 40);
 
         tfValor8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         getContentPane().add(tfValor8);
-        tfValor8.setBounds(630, 300, 100, 30);
+        tfValor8.setBounds(580, 300, 100, 30);
 
         btEntra.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btEntra.setText("Entra");
@@ -137,18 +139,24 @@ public class Tela1 extends javax.swing.JFrame {
 
     private void btEntraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btEntraMouseClicked
         int[] valores = new int[8];
-        valores[0] = Integer.parseInt(tfValor1.getText());
-        valores[1] = Integer.parseInt(tfValor2.getText());
-        valores[2] = Integer.parseInt(tfValor3.getText());
-        valores[3] = Integer.parseInt(tfValor4.getText());
-        valores[4] = Integer.parseInt(tfValor5.getText());
-        valores[5] = Integer.parseInt(tfValor6.getText());
-        valores[6] = Integer.parseInt(tfValor7.getText());
-        valores[7] = Integer.parseInt(tfValor8.getText());
-        Arrays.sort(valores);
-        dispose();
-        Tela2 tela = new Tela2();
-        tela.setVisible(true);
+        try{
+            valores[0] = Integer.parseInt(tfValor1.getText());
+            valores[1] = Integer.parseInt(tfValor2.getText());
+            valores[2] = Integer.parseInt(tfValor3.getText());
+            valores[3] = Integer.parseInt(tfValor4.getText());
+            valores[4] = Integer.parseInt(tfValor5.getText());
+            valores[5] = Integer.parseInt(tfValor6.getText());
+            valores[6] = Integer.parseInt(tfValor7.getText());
+            valores[7] = Integer.parseInt(tfValor8.getText());
+            Arrays.sort(valores);
+            Info.encher(valores);
+            dispose();
+            Tela2 tela = new Tela2();
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Valores inválidos.", "ERRO", JOptionPane.ERROR_MESSAGE);
+        }
+        
     }//GEN-LAST:event_btEntraMouseClicked
 
     /**

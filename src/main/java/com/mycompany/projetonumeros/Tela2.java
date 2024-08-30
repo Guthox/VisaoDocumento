@@ -14,7 +14,9 @@ public class Tela2 extends javax.swing.JFrame {
      * Creates new form Tela1
      */
     public Tela2() {
+        super("Pesquisar valores");
         initComponents();
+        setVisible(true);
     }
 
     /**

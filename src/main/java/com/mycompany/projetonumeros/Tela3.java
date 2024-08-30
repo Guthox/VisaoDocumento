@@ -14,15 +14,16 @@ public class Tela3 extends javax.swing.JFrame {
      * Creates new form Tela3
      */
     public Tela3() {
-        super("Tela3");
+        super("Resultado");
         initComponents();
         
         if (Info.esta(Info.pegarValor())){
-           lbResultado.setText("Chave encontrada. Posição: " + Info.achar(Info.pegarValor()) + 1);
+           lbResultado.setText("Chave encontrada. Posição: " + (Info.achar(Info.pegarValor()) + 1));
         }
         else{
             lbResultado.setText("Chave não encontrada");
         }
+        setVisible(true);
         
         
     }
@@ -44,39 +45,30 @@ public class Tela3 extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(800, 600));
         setPreferredSize(new java.awt.Dimension(800, 600));
         setResizable(false);
+        getContentPane().setLayout(null);
 
         lbResultado.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lbResultado.setText("Chave encontrada na posição: / Chave não encontrada");
+        lbResultado.setText("Chave encontrada na posição: / ");
+        getContentPane().add(lbResultado);
+        lbResultado.setBounds(190, 160, 511, 69);
 
         btEntra.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btEntra.setText("Entra");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(lbResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(278, 278, 278)
-                        .addComponent(btEntra, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(59, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(144, 144, 144)
-                .addComponent(lbResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
-                .addComponent(btEntra, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(112, 112, 112))
-        );
+        btEntra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btEntraMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btEntra);
+        btEntra.setBounds(278, 341, 126, 65);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btEntraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btEntraMouseClicked
+        dispose();
+        Tela1 tela = new Tela1();
+    }//GEN-LAST:event_btEntraMouseClicked
 
     /**
      * @param args the command line arguments
