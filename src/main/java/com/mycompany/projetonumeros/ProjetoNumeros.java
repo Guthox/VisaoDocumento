@@ -11,6 +11,7 @@ package com.mycompany.projetonumeros;
 public class ProjetoNumeros {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Tela1 tela = new Tela1();
+        tela.setVisible(true);
     }
 }

@@ -60,6 +60,9 @@ public class Tela2 extends javax.swing.JFrame {
 
     private void btEntraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btEntraMouseClicked
         Info.guardarValor(Integer.parseInt(tfValorInteiro.getText()));
+        dispose();
+        Tela3 tela = new Tela3();
+        tela.setVisible(true);
     }//GEN-LAST:event_btEntraMouseClicked
 
     /**

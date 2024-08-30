@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.projetonumeros;
-
+import java.util.Arrays;
 /**
  *
  * @author Gutho
@@ -14,6 +14,7 @@ public class Tela1 extends javax.swing.JFrame {
      * Creates new form Tela1
      */
     public Tela1() {
+        super("Adicionar Valores");
         initComponents();
     }
 
@@ -123,11 +124,32 @@ public class Tela1 extends javax.swing.JFrame {
 
         btEntra.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btEntra.setText("Entra");
+        btEntra.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btEntraMouseClicked(evt);
+            }
+        });
         getContentPane().add(btEntra);
         btEntra.setBounds(360, 380, 130, 60);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btEntraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btEntraMouseClicked
+        int[] valores = new int[8];
+        valores[0] = Integer.parseInt(tfValor1.getText());
+        valores[1] = Integer.parseInt(tfValor2.getText());
+        valores[2] = Integer.parseInt(tfValor3.getText());
+        valores[3] = Integer.parseInt(tfValor4.getText());
+        valores[4] = Integer.parseInt(tfValor5.getText());
+        valores[5] = Integer.parseInt(tfValor6.getText());
+        valores[6] = Integer.parseInt(tfValor7.getText());
+        valores[7] = Integer.parseInt(tfValor8.getText());
+        Arrays.sort(valores);
+        dispose();
+        Tela2 tela = new Tela2();
+        tela.setVisible(true);
+    }//GEN-LAST:event_btEntraMouseClicked
 
     /**
      * @param args the command line arguments
